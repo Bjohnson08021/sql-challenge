@@ -61,7 +61,6 @@ WHERE DROP TABLE titles
 CREATE TABLE titles (
 	title_id VARCHAR PRIMARY KEY NOT NULL,
 	title VARCHAR(30) NOT NULL
-	--FOREIGN KEY(title_id) REFERENCES employees(title_id)
 );
 
 SELECT * FROM titles
@@ -192,31 +191,7 @@ dept.emp_no=employees.emp_no
 INNER JOIN departments on 
 dept.dept_no=departments.dept_no;
 ------------------------------
---WHERE CustomerName LIKE 'a%'	Finds any values that start with "a"
-SELECT last_name, first_name, gender
-FROM employees
-WHERE first_name = 'Hercules' and last_name like 'B%';
+
+
 ------------------------------
-SELECT  departments.dept_name, employees.last_name, employees.first_name, employees.emp_no
-FROM  dept_emp as dept
-FULL JOIN employees ON
-dept.emp_no=employees.emp_no
-INNER JOIN departments on 
-dept.dept_no=departments.dept_no
-Where departments.dept_name = 'Sales';
----------------------------------------
-SELECT  departments.dept_name, employees.last_name, employees.first_name, employees.emp_no
-FROM  dept_emp as dept
-FULL JOIN employees ON
-dept.emp_no=employees.emp_no
-INNER JOIN departments on 
-dept.dept_no=departments.dept_no
-Where departments.dept_name = 'Sales' OR departments.dept_name = 'Development';
---------------------------------------
-SELECT last_name, COUNT(last_name) AS "employees count"
-FROM employees
-GROUP BY last_name
-ORDER BY "employees count" DESC;
-
-
 
