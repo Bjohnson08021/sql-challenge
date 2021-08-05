@@ -48,6 +48,7 @@ DROP TABLE  salaries
 CREATE TABLE salaries (
 	emp_no INT NOT NULL, 
 	salary INT NOT NULL,
+	unique (emp_no),
 	FOREIGN KEY(emp_no) REFERENCES employees(emp_no)
 );
 SELECT * FROM salaries
